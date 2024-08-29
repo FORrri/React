@@ -1,0 +1,18 @@
+* {margin: 0; padding: 0;}
+
+.wrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: yellow;
+}
+.wrap_list {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  list-style: none;
+}
+.wrap_list > li {
+  flex-basis: 80px;
+  padding: 10px;
+}

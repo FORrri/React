@@ -1,11 +1,27 @@
+import { useParams } from "react-router-dom";
 
 
 function Info() {
 
-  return (
+  //예시데이터
+  const data = { //키:값
+    "1" : {id:1, name:"홍길동"},
+    "2" : {id:2, name:"이순신"},
+    "3" : {id:3, name:"신사임당"}
+  }
 
+  //useParam훅 - URL파라미터
+  let param = useParams();
+  console.log(param);
+  console.log(param.num); //{num: '1'} -> 찾아서 사용
+
+  const {id,name} = data[param.num];
+
+  return (
     <div>
       <h3>Info 페이지 입니다</h3>
+      <div>
+        선택된 데이터는 {id}이고 {name}입니다.</div>
     </div>
   )
 }
